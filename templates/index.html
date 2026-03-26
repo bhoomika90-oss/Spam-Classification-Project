@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Spam Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>📩 Spam Detection System</h1>
+
+    <form action="/predict" method="post">
+        <textarea name="message" placeholder="Type your message here..."></textarea><br>
+        <button type="submit">🚀 Check Message</button>
+    </form>
+
+    {% if prediction_text %}
+        <div class="result-box">
+
+            <h2 class="{% if 'Spam' in prediction_text %}spam{% else %}safe{% endif %}">
+                {{ prediction_text }}
+            </h2>
+
+            <!-- Result Image -->
+            <img src="{{ url_for('static', filename=image_name) }}" class="result-img">
+
+            <!-- GIF based on result -->
+            {% if 'Spam' in prediction_text %}
+                <img src="{{ url_for('static', filename='spam.gif') }}" class="gif">
+            {% else %}
+                <img src="{{ url_for('static', filename='safe.gif') }}" class="gif">
+            {% endif %}
+
+            <p>📊 Spam: {{ spam_prob }}% | Not Spam: {{ ham_prob }}%</p>
+            <p>📝 Words: {{ words }} | Characters: {{ chars }}</p>
+            <p>⏰ {{ time }}</p>
+            <p>🔍 Keywords: {{ keywords }}</p>
+
+        </div>
+
+        {% if 'Spam' in prediction_text %}
+        <audio autoplay>
+            <source src="{{ url_for('static', filename='alert.mp3') }}">
+        </audio>
+        {% endif %}
+
+    {% endif %}
+
+</div>
+
+</body>
+</html>

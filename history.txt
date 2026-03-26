@@ -1,0 +1,10 @@
+2026-03-26 19:26:14 | win your money --> Not Spam
+2026-03-26 20:21:33 | hello --> Not Spam
+2026-03-26 20:22:20 | you win money --> Not Spam
+2026-03-26 20:22:28 | u win money --> Not Spam
+2026-03-26 20:29:41 | hello --> Not Spam
+2026-03-26 20:33:26 | fv --> Not Spam
+2026-03-26 20:34:38 | 👉 “Hi, how are you doing today?” --> Not Spam
+2026-03-26 20:34:55 | “Get free recharge now. Offer valid today only.” --> Not Spam
+2026-03-26 20:42:33 | good stuff,will do --> Not Spam
+2026-03-26 20:43:01 | Free entry in 2 a wkly comp to win FA Cup final tkts 21st May 2005. Text FA to 87121 to receive entry question(std txt rate)T&C's apply 08452810075over18's --> Spam

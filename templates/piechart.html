@@ -1,0 +1,20 @@
+<h2>📊 Accuracy Distribution</h2>
+
+<canvas id="pieChart"></canvas>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+const pie = document.getElementById('pieChart').getContext('2d');
+
+new Chart(pie, {
+    type: 'pie',
+    data: {
+        labels: ['Correct Prediction', 'Error'],
+        datasets: [{
+            data: [95, 5],
+            backgroundColor: ['green', 'red']
+        }]
+    }
+});
+</script>

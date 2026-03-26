@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Dashboard</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="dashboard">
+
+<h1>📊 Spam Detection Dashboard</h1>
+
+<!-- Buttons -->
+<a href="/predict_page"><button>🔍 Check Message</button></a>
+<a href="https://www.kaggle.com/datasets/uciml/sms-spam-collection-dataset">
+<button>📂 Dataset</button></a>
+
+<!-- Auto Test -->
+<a href="/auto_test"><button>⚡ Auto Test</button></a>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<h2>📊 Model Accuracy</h2>
+<canvas id="barChart"></canvas>
+
+<script>
+const ctx = document.getElementById('barChart');
+
+new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ['Accuracy'],
+        datasets: [{
+            label: 'Spam Detection Accuracy',
+            data: [95],
+            backgroundColor: ['#4CAF50']
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true,
+                max: 100
+            }
+        }
+    }
+});
+</script>
+
+<!-- Accuracy Graph -->
+<canvas id="myChart"></canvas>
+
+<script>
+const ctx = document.getElementById('myChart');
+
+new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ['Accuracy'],
+        datasets: [{
+            label: 'Model Accuracy',
+            data: [95],
+            backgroundColor: ['green']
+        }]
+    }
+});
+<h2>📊 Accuracy Distribution</h2>
+
+<canvas id="pieChart"></canvas>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+const pie = document.getElementById('pieChart').getContext('2d');
+
+new Chart(pie, {
+    type: 'pie',
+    data: {
+        labels: ['Correct Prediction', 'Error'],
+        datasets: [{
+            data: [95, 5],
+            backgroundColor: ['green', 'red']
+        }]
+    }
+});
+</script>
+</script>
+
+</div>
+
+</body>
+</html>

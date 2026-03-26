@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Spam Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="container">
+    <h1>📩 Spam Detector</h1>
+
+    <form action="/predict" method="post">
+        <textarea name="message" placeholder="Type your message here..."></textarea><br>
+        <button type="submit">🚀 Analyze</button>
+<form action="/predict" method="post" onsubmit="showLoader()">
+<button onclick="toggleMode()">🌙 Toggle Mode</button>
+    </form>
+</div>
+<div id="loader" style="display:none;">
+    <h2>⏳ Analyzing message...</h2>
+</div>
+</body>
+</html>

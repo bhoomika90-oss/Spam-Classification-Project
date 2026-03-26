@@ -1,0 +1,30 @@
+body {
+    margin: 0;
+    font-family: Arial;
+    background: #6af400;
+}
+
+/* Login & forms */
+.container {
+    width: 350px;
+    margin: 100px auto;
+    text-align: center;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+/* Dashboard */
+.dashboard {
+    padding: 40px;
+    text-align: center;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    background: #f7003a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}

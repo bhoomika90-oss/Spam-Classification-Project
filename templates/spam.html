@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Spam Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1 class="spam">🚨 Spam Detected</h1>
+
+    <img src="{{ url_for('static', filename='spam.png') }}" width="120">
+    <img src="{{ url_for('static', filename='spam.gif') }}" width="180">
+
+    <p><b>{{ msg }}</b></p>
+
+    <a href="/">⬅ Back</a>
+
+</div>
+
+</body>
+</html>
